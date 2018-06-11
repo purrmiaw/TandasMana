@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MasterTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="MasterTheme" parent="MasterTheme.Base">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <!--&lt;!&ndash; Status Bar Colour &ndash;&gt;-->
+        <!--<item name="android:statusBarColor">@color/colorPrimaryDark</item>-->
+
+        <!--&lt;!&ndash; PreferenceFragmentCompat &ndash;&gt;-->
+        <!--<item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>-->
+        <!--<item name="alertDialogTheme">@style/AppAlertDialog</item>-->
+        <!--&lt;!&ndash; End PreferenceFragmentCompat &ndash;&gt;-->
+
+    </style>
+
+    <!--<style name="MasterTheme.ServiceCategories" parent="MasterTheme">-->
+    <!--<item name="android:windowExitTransition">@transition/transition_all_mainexit</item>-->
+    <!--<item name="android:windowReenterTransition">@transition/transition_all_mainreenter</item>-->
+    <!--</style>-->
+
+    <!--<style name="MasterTheme.Services" parent="MasterTheme">-->
+    <!--<item name="android:windowTranslucentStatus">true</item>-->
+    <!--<item name="android:windowAllowEnterTransitionOverlap">true</item>-->
+    <!--<item name="android:windowEnterTransition">@transition/transition_all_detailenter</item>-->
+    <!--</style>-->
+
+    <style name="MasterTheme.Button" parent="MasterTheme">
+        <!-- Default Button Colour and Text -->
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AppAlertDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppAlertDialogContent" parent="Theme.AppCompat.DayNight">
+        <!-- To keep the color of EditText -->
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MasterTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="MasterTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
+
+    <!--<resources>-->
+
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;--><!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">--><!--&lt;!&ndash; Customize your theme here. &ndash;&gt;--><!--<item name="colorPrimary">@color/colorPrimary</item>--><!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>--><!--<item name="colorAccent">@color/colorAccent</item>--><!--</style>-->
+
+    <!--<style name="AppTheme.NoActionBar">--><!--<item name="windowActionBar">false</item>--><!--<item name="windowNoTitle">true</item>--><!--</style>-->
+
+    <!--<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+
+    <!--<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+    <!--</resources>-->

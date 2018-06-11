@@ -1,0 +1,212 @@
+<resources>
+    <!-- Start -->
+    <string name="app_name">MARA EPS</string>
+
+    <string name="menu_accounts">Accounts</string>
+    <string name="menu_configuration">Configuration</string>
+    <string name="configurationview_localonly">Local Only</string>
+    <string name="configurationview_purchase">Purchase Now</string>
+
+    <string name="accountdetails_title">Account</string>
+
+    <string name="bottomnavigationview_order">Order</string>
+    <string name="bottomnavigationview_history">History</string>
+    <string name="paymentactivity_title">Select Payment Method</string>
+    <string name="paymentwaitactivity_title">Processing Payment</string>
+    <string name="orderselectserviceactivity_title">Air Cond Service</string>
+    <string name="orderselectcompanyactivity_title">Select Service Provider</string>
+    <string name="accountlogin_failedtologin">Failed to login. Please try again.</string>
+
+    <string name="accountlogin_title">Login</string>
+    <string name="accountlogin_email">Email</string>
+    <string name="accountlogin_password">Password</string>
+    <string name="accountlogin_login">Log in</string>
+    <string name="accountlogin_signup">No account yet?</string>
+    <string name="accountlogin_signupbutton">Sign up</string>
+    <string name="accountregister_failedtoregister">Failed to register. Please try again.</string>
+    <string name="accountregister_title">Register</string>
+    <string name="accountregister_email">Email</string>
+    <string name="accountregister_password">Password</string>
+    <string name="accountregister_register">Register</string>
+    <string name="accountregister_alreadyhaveaccount">Already have an account?</string>
+    <string name="accountregister_login">Log in.</string>
+    <string name="accountregister_failedtologin">Failed to log in. Please try logging in again.</string>
+
+    <string name="companydetails_rating">Rating</string>
+    <string name="companydetails_services">Services</string>
+    <string name="companydetails_joined">Joined</string>
+    <string name="companydetails_location">Location</string>
+    <string name="companydetails_submitordererror">Error submitting order. Please try again.</string>
+    <string name="companydetails_acceptbidsuccess">You have accepted the bid. The service provider will come to you at the arranged time.</string>
+
+    <string name="serviceproviderdetails_order">Order Now</string>
+
+    <string name="orderdetails_serviceprovider">Service provider</string>
+    <string name="orderdetails_fee">Fee</string>
+    <string name="orderdetails_amountdue">Amount Due</string>
+    <string name="orderdetails_client">Client</string>
+    <string name="orderdetails_title">Order</string>
+    <string name="orderdetails_date">Date</string>
+    <string name="orderdetails_time">Time</string>
+    <string name="orderdetails_status">Status</string>
+    <string name="orderdetails_services">Services</string>
+    <string name="orderdetails_location">Location</string>
+    <string name="orderdetails_bid">Bid for Job</string>
+    <string name="orderdetails_cancelbid">Cancel Bid</string>
+    <string name="orderdetails_markasdone">Mark as Work Completed</string>
+    <string name="orderdetails_rateandreview">Rate and Review</string>
+    <string name="orderdetails_viewbids">View Bids</string>
+    <string name="orderdetails_ratingreviewsuccess">Thank you for reviewing!</string>
+    <string name="orderdetails_noserviceprovideryet">No Service Provider yet. Choose a service provider from the list of bids.</string>
+
+    <string name="orders_noorderhistory">No order history</string>
+    <string name="orders_ordernow">Order your first GoRabbit now!</string>
+
+    <string name="bids_title">Bids</string>
+    <string name="bids_nobidsyet">No bids yet</string>
+    <string name="bids_nobidsyetdescription">We will notify you when you receive a new bid.
+  Feel free to close this screen.</string>
+    <string name="bids_cancelorder">Cancel Order</string>
+
+    <string name="bids_cancelordersuccessful">Your order have been cancelled.</string>
+    <string name="bids_cancelorderfailed">Request failed. Your order have NOT been cancelled.</string>
+
+    <string name="orderconfirm_title">Confirm Order</string>
+    <string name="companydetails_title">Service Provider</string>
+    <string name="companydetails_acceptbid">Accept Bid</string>
+    <string name="orderwait_waitingforserviceprovider">Waiting for confirmation from provider</string>
+    <string name="orderwait_chooseanotherprovider">Choose Another Provider</string>
+
+    <string name="configuration_displayname">Display Name</string>
+    <string name="configuration_displaynamedescription">Change your display name.</string>
+    <string name="configuration_address">Address</string>
+    <string name="configuration_addressdescription">Touch here to update your address</string>
+    <string name="configuration_paymentmethod">Credit: </string>
+    <string name="configuration_paymentmethoddescription">Touch here to top up balance</string>
+    <string name="configuration_becomeaprovider">Become a Provider</string>
+    <string name="configuration_becomeaproviderdescription">Become a provider yourself</string>
+    <string name="configuration_logout">Log Out</string>
+    <string name="configuration_logoutdescription">Log out from your current session</string>
+
+    <string name="configurationdisplaynamedialog_setdisplayname">Set Display Name</string>
+    <string name="configurationdisplaynamedialog_updatesuccessful">Display name successfully updated.</string>
+    <string name="configurationdisplaynamedialog_updatefailed">Display name not updated. Please try again.</string>
+    <string name="configurationdisplaynamedialog_title">Display name</string>
+
+    <string name="orderconfirm_paymentmethod">Select Payment Method</string>
+    <string name="orderselectservice_ordersubmitted">Order submitted. Please wait for bids.</string>
+    <string name="orderselectlocation_title">Select Location</string>
+    <string name="orderrate_title">Rate this Provider</string>
+
+    <string name="orderrate_beforerate">Press on the stars above to rate</string>
+    <string name="orderrate_rating1">Hated it</string>
+    <string name="orderrate_rating2">Disliked it</string>
+    <string name="orderrate_rating3">Okay</string>
+    <string name="orderrate_rating4">Liked it!</string>
+    <string name="orderrate_rating5">Loved it!</string>
+    <string name="orderrate_reviewplaceholder">Tell us what you think</string>
+    <string name="orderrate_submit">Submit</string>
+    <string name="orderrate_finish">Finish</string>
+
+    <string name="upgradedialog_title">Update Required</string>
+    <string name="upgradedialog_text">Please update Rabbit to the latest version.</string>
+    <string name="upgradedialog_button">Update</string>
+
+    <string name="ordercreate_street1">Street 1</string>
+    <string name="ordercreate_street2">Street 2</string>
+    <string name="ordercreate_postcode">Postcode</string>
+    <string name="ordercreate_city">City</string>
+    <string name="ordercreate_state">State</string>
+    <string name="ordercreate_email">Email</string>
+    <string name="ordercreate_password">Password</string>
+    <string name="ordercreate_dateandtime">Date and Time</string>
+    <string name="ordercreate_submitorder">Submit Order</string>
+    <string name="ordercreate_failedtosubmitorder">Failed submitting order. Please try again.</string>
+    <string name="ordercreate_title">Address</string>
+
+    <string name="help_title">Help</string>
+    <string name="help_refunddescription">I would like a refund</string>
+    <string name="help_canceldescription">I would like to cancel this order</string>
+    <string name="help_rescheduledescription">I would like to reschedule this order</string>
+
+    <string name="orderdispute_title">Dispute</string>
+    <string name="orderdispute_submit">Submit</string>
+    <string name="orderdispute_header">Dispute an Order</string>
+    <string name="orderdispute_bodyone">GoRabbit provides a mediation platform in the event of a dispute between the User and the Provider.</string>
+    <string name="orderdispute_bodytwo">Please share with us the details of your grief so we can review your dispute request. We will review your request and will be in touch with you soon.</string>
+    <string name="orderdispute_edittexthint">Dispute Details</string>
+    <string name="orderdispute_errorsubmit">Error submitting your dispute. Please try again.</string>
+    <string name="orderdispute_successsubmit">Your dispute have been recorded. We will be in touch soon.</string>
+
+    <string name="ordercancel_title">Cancel Order</string>
+    <string name="ordercancel_submit">Cancel Order</string>
+    <string name="ordercancel_header">Cancel Order</string>
+    <string name="ordercancel_bodyone">You can cancel any Order that you have requested, even after you have paid the deposit.</string>
+    <string name="ordercancel_bodynocharge">Since you have not accepted any bids for this order yet, cancelling this order will not incur any charges.</string>
+    <string name="ordercancel_bodycharge">You will receive the deposit that you have paid in your account in 5 business days. Please note that since a bid have been accepted for this order, you will incur charges.</string>
+
+    <string name="accountsdetails_title">Account</string>
+    <string name="accountsdetails_bayar">Bayar</string>
+    <string name="accountsdetails_emandate">E-Mandate</string>
+    <string name="accountsdetails_accountnumber">Nombor Akaun</string>
+    <string name="accountsdetails_accounttype">Jenis Akaun</string>
+    <string name="accountsdetails_userid">No ID Pengguna</string>
+    <string name="accountsdetails_bakiornilai">Baki / Nilai</string>
+    <string name="accountsdetails_jumlahdibayar">Jumlah Dibayar</string>
+    <string name="accountsdetails_jumlahtertunggak">Jumlah Tertunggak</string>
+    <string name="accountsdetails_accountstatus">Status</string>
+    <string name="accountsdetails_emandatestatus">Status e-Mandate</string>
+
+    <string name="accountspayments_title">Pembayaran</string>
+    <string name="accountspayments_ic">Nombor KP / Identifikasi</string>
+    <string name="accountspayments_fullname">Nama Penuh</string>
+    <string name="accountspayments_address">Alamat</string>
+    <string name="accountspayments_email">E-mel</string>
+    <string name="accountspayments_mobilephone">Telefon Bimbit</string>
+    <string name="accountspayments_homephone">Telefon Rumah</string>
+    <string name="accountspayments_jumlahtertunggak">Jumlah Tertunggak</string>
+    <string name="accountspayments_nilaimaksimumpertransaksi">Nilai Maksimum per Transaksi</string>
+    <string name="accountspayments_tarikhmulabayar">Tarikh Mula Bayar</string>
+    <string name="accountspayments_paymentmethod">Kaedah Pembayaran</string>
+    <string name="accountspayments_nilaipembayaran">Nilai Pembayaran</string>
+    <string name="accountspayments_fpx">FPX</string>
+    <string name="accountspayments_kadkredit">Kad Kredit</string>
+    <string name="accountspayments_selectbank">Select Bank</string>
+    <string name="accountspayments_submitbutton">Bayar Sekarang</string>
+
+    <string name="accountsemandatecreate_title">E-Mandate</string>
+    <string name="accountsemandatecreate_jadualpembayaran">Jadual Pembayaran</string>
+    <string name="accountsemandatecreate_submitbutton">Mohon Sekarang</string>
+
+    <string name="addressdialog_address">Address</string>
+    <string name="addressdialog_save">Save</string>
+    <string name="addressdialog_cancel">Cancel</string>
+
+    <string name="myfirebasemessagingservice_bidreceivedtitle">Bid received</string>
+    <string name="myfirebasemessagingservice_bidreceivedtext">You have received a new bid.</string>
+    <string name="myfirebasemessagingservice_ordermarkedasdonetitle">Order done</string>
+    <string name="myfirebasemessagingservice_ordermarkedasdonetext">Please rate and review the order.</string>
+
+    <string name="main_new">New</string>
+    <string name="main_accepted">Accepted</string>
+    <string name="main_done">Done</string>
+    <string name="main_closed">Closed</string>
+    <string name="main_cancelled">Cancelled</string>
+    <string name="main_disputed">Disputed</string>
+
+    <string name="all_state">State</string>
+    <string name="all_save">Save</string>
+    <string name="all_cancel">Cancel</string>
+
+    <string name="optionsmenu_login">Login</string>
+    <string name="optionsmenu_cancelorder">Cancel order</string>
+    <string name="optionsmenu_disputeorder">Dispute order</string>
+    <string name="optionsmenu_help">Help</string>
+
+    <string name="bottomnavigationview_akaun">Akaun</string>
+    <string name="title_activity_account_details">AccountDetailsActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
