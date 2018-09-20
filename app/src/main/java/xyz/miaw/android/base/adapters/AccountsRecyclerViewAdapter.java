@@ -1,14 +1,19 @@
 package xyz.miaw.android.base.adapters;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
+import xyz.miaw.android.base.R;
 import xyz.miaw.android.base.models.SharedAccount;
 
 // Reference: https://android.jlelse.eu/click-listener-for-recyclerview-adapter-2d17a6f6f6c9
@@ -38,6 +43,11 @@ public class AccountsRecyclerViewAdapter extends RecyclerView.Adapter {
         // Change subtitle based on status
         accountsRecyclerViewViewHolder.title.setText("Akaun #" + currentSharedAccount.AccountNumber);
         accountsRecyclerViewViewHolder.detailOne.setText("RM " + String.format("%1$,.2f", currentSharedAccount.BakiOrNilai));
+
+        // Image
+        Context context = accountsRecyclerViewViewHolder.imageView.getContext();
+        Glide.with(context).load(currentSharedAccount.AccountType).into(accountsRecyclerViewViewHolder.imageView);
+
         accountsRecyclerViewViewHolder.accountNumber = currentSharedAccount.AccountNumber;
 
     }
@@ -46,7 +56,7 @@ public class AccountsRecyclerViewAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(xyz.miaw.android.base.R.layout.item_account, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_listview_picture_1_1, parent, false);
 
         // No listener
 //        AccountsRecyclerViewViewHolder accountsRecyclerViewViewHolder = new AccountsRecyclerViewViewHolder(itemView);
@@ -103,6 +113,7 @@ public class AccountsRecyclerViewAdapter extends RecyclerView.Adapter {
         // each data item is just a string in this case
         public TextView title;
         public TextView detailOne;
+        public AppCompatImageView imageView;
         public String accountNumber;
 
         // listener
@@ -122,8 +133,9 @@ public class AccountsRecyclerViewAdapter extends RecyclerView.Adapter {
 
             super(view);
 
-            title = view.findViewById(xyz.miaw.android.base.R.id.textview_item_accountnumber);
-            detailOne = view.findViewById(xyz.miaw.android.base.R.id.textview_item_amount);
+            title = view.findViewById(R.id.textview_item_title);
+            detailOne = view.findViewById(R.id.textview_item_detailone);
+            imageView = view.findViewById(R.id.circleimageview_item);
 
             // set listener
             _listener = onClickListener;

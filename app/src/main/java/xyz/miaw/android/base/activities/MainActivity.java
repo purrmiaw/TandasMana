@@ -8,10 +8,12 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.TransitionManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import xyz.miaw.android.base.R;
 import xyz.miaw.android.base.extensions.BottomNavigationViewBehavior;
 import xyz.miaw.android.base.fragments.AccountsFragment;
 import xyz.miaw.android.base.fragments.ConfigurationFragment;
@@ -40,13 +42,16 @@ public class MainActivity extends AppCompatActivity {
         if (toolbar != null){
             toolbar.setTitle(xyz.miaw.android.base.R.string.app_name);
             setSupportActionBar(toolbar);
+
             getSupportActionBar().setHomeButtonEnabled(false);
         }
+
 //
 //        // TODO: check refresh token
 //
 //        // TODO: check version. force upgrade.
 //
+
         // Assign items
         _mainContainer = findViewById(xyz.miaw.android.base.R.id.coordinatorlayout_main_maincontainer);
         _bottomNavigationView = findViewById(xyz.miaw.android.base.R.id.bottom_navigation);
@@ -63,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         // fragment to show by 'clicking' on the bottomnavigationview_invoices button.
         _bottomNavigationViewInvoicesButton = _bottomNavigationView.findViewById(xyz.miaw.android.base.R.id.menu_home);
         _bottomNavigationViewInvoicesButton.performClick();
+
+
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener _onNavigationItemSelectedListener
@@ -73,6 +80,12 @@ public class MainActivity extends AppCompatActivity {
 
             FragmentTransaction fragmentTransaction =
                     MainActivity.super.getSupportFragmentManager().beginTransaction();
+
+            fragmentTransaction.setCustomAnimations(R.anim.abc_fade_in, R.anim.abc_fade_out);
+
+
+            // Transition (API 19)
+            TransitionManager.beginDelayedTransition(_mainContainer);
 
             switch (item.getItemId()) {
                 case xyz.miaw.android.base.R.id.menu_home:

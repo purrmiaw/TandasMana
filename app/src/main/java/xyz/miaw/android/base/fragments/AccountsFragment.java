@@ -15,9 +15,16 @@ import android.widget.ProgressBar;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import xyz.miaw.android.base.activities.AccountDetailsActivity;
 import xyz.miaw.android.base.adapters.AccountsRecyclerViewAdapter;
+import xyz.miaw.android.base.interfaces.MiawSampleApiService;
 import xyz.miaw.android.base.models.SharedAccount;
+import xyz.miaw.android.base.models.SharedStuff;
 
 public class AccountsFragment extends Fragment {
 
@@ -35,7 +42,7 @@ public class AccountsFragment extends Fragment {
     private AccountsRecyclerViewAdapter _adapter;
     private SwipeRefreshLayout _swipeRefreshLayout;
     private List<SharedAccount> _sharedAccounts;
-    private ProgressBar _progresBar;
+    private ProgressBar _progressBar;
 
     private int _page;
     private int _count;
@@ -144,7 +151,7 @@ public class AccountsFragment extends Fragment {
         });
         // TODO: refresh listener
 
-        _progresBar = view.findViewById(xyz.miaw.android.base.R.id.progressbar_accounts);
+        _progressBar = view.findViewById(xyz.miaw.android.base.R.id.progressbar_accounts);
 
         // Populate RecyclerView
         populateRecyclerView();
@@ -154,26 +161,64 @@ public class AccountsFragment extends Fragment {
 
     private void populateRecyclerView(){
 
-        _progresBar.setVisibility(View.GONE);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://sampleapi.miaw.xyz/api/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
-        SharedAccount sharedAccount1 = new SharedAccount();
-        sharedAccount1.AccountNumber = "sxdasfd";
-        sharedAccount1.BakiOrNilai = 20.45;
-        sharedAccount1.AccountStatus1 = "xx";
-        sharedAccount1.AccountStatus2 = "yy";
+        MiawSampleApiService miawSampleApiService = retrofit.create(MiawSampleApiService.class);
 
-        _sharedAccounts.add(sharedAccount1);
-        _adapter.addToList(_sharedAccounts);
+        Call<List<SharedStuff>> callSharedStuffs = miawSampleApiService.StuffsGetAll();
 
-        if (_sharedAccounts.size() == 0){
-            _recyclerView.setVisibility(View.GONE);
-            LinearLayout noOrdersLayout = _view.findViewById(xyz.miaw.android.base.R.id.linearlayout_accounts_noordersview);
-            noOrdersLayout.setVisibility(View.VISIBLE);
-        }
+        callSharedStuffs.enqueue(new Callback<List<SharedStuff>>() {
 
-        // This initiates the animation set in android:layoutAnimation property
-        // of the RecyclerView
-        _recyclerView.scheduleLayoutAnimation();
+            @Override
+            public void onResponse(Call<List<SharedStuff>> call, Response<List<SharedStuff>> response) {
+
+                _progressBar.setVisibility(View.GONE);
+
+                List<SharedStuff> sharedStuffs = response.body();
+
+                for (SharedStuff sharedStuff : sharedStuffs) {
+                    SharedAccount sharedAccountTry = new SharedAccount();
+                    sharedAccountTry.AccountNumber = sharedStuff.name;
+                    sharedAccountTry.BakiOrNilai = sharedStuff.id;
+                    sharedAccountTry.AccountType = sharedStuff.imageUrl;
+                    _sharedAccounts.add(sharedAccountTry);
+                }
+
+                _adapter.notifyDataSetChanged();
+//                _adapter.addToList(_sharedAccounts);
+
+                // This initiates the animation set in android:layoutAnimation property
+                // of the RecyclerView
+                _recyclerView.scheduleLayoutAnimation();
+            }
+
+            @Override
+            public void onFailure(Call<List<SharedStuff>> call, Throwable t) {
+
+            }
+        });
+
+//        SharedAccount sharedAccount1 = new SharedAccount();
+//        sharedAccount1.AccountNumber = "sxdasfd";
+//        sharedAccount1.BakiOrNilai = 20.45;
+//        sharedAccount1.AccountStatus1 = "xx";
+//        sharedAccount1.AccountStatus2 = "yy";
+//
+//        _sharedAccounts.add(sharedAccount1);
+//        _adapter.addToList(_sharedAccounts);
+
+//        if (_sharedAccounts.size() == 0){
+//            _recyclerView.setVisibility(View.GONE);
+//            LinearLayout noOrdersLayout = _view.findViewById(xyz.miaw.android.base.R.id.linearlayout_accounts_noordersview);
+//            noOrdersLayout.setVisibility(View.VISIBLE);
+//        }
+//
+//        // This initiates the animation set in android:layoutAnimation property
+//        // of the RecyclerView
+//        _recyclerView.scheduleLayoutAnimation();
 
     }
 //
