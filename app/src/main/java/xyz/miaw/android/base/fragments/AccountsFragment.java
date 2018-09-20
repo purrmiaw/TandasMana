@@ -183,6 +183,7 @@ public class AccountsFragment extends Fragment {
                     SharedAccount sharedAccountTry = new SharedAccount();
                     sharedAccountTry.AccountNumber = sharedStuff.name;
                     sharedAccountTry.BakiOrNilai = sharedStuff.id;
+                    sharedAccountTry.AccountType = sharedStuff.imageUrl;
                     _sharedAccounts.add(sharedAccountTry);
                 }
 
